@@ -1,7 +1,7 @@
 import React, { useReducer, createContext } from "react";
 import contextReducer from "./contextReducer";
 
-const initialState = [];
+const initialState = JSON.parse(localStorage.getItem("transactions")) || [{"amount":2321,"category":"Salary","type":"Income","date":"2021-05-27","id":"b1398742-da50-4c41-ae0d-edf5bb15488e"}];
 export const ExpenseTrackerContext = createContext(initialState);
 
 export const Provider = ({ children }) => {
